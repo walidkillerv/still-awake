@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>STILL AWAKE</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- BOOT SCREEN -->
+  <div id="boot-screen">
+    <div id="boot-text"></div>
+  </div>
+
+  <!-- TITLE SCREEN -->
+  <div id="title-screen" class="hidden">
+    <div id="title-glitch" data-text="STILL AWAKE">STILL AWAKE</div>
+    <div id="title-sub">a game about remembering</div>
+    <div id="title-menu">
+      <div class="menu-item" id="btn-new-game">[ NEW GAME ]</div>
+      <div class="menu-item" id="btn-continue">[ CONTINUE ]</div>
+      <div class="menu-item" id="btn-lore">[ THE ARCHIVE ]</div>
+    </div>
+    <div id="title-warning">You have played this before. You just don't remember.</div>
+  </div>
+
+  <!-- LORE SCREEN -->
+  <div id="lore-screen" class="hidden">
+    <div id="lore-container">
+      <div id="lore-title">THE ARCHIVE</div>
+      <div id="lore-entries"></div>
+      <div class="menu-item" id="btn-lore-back">[ BACK ]</div>
+    </div>
+  </div>
+
+  <!-- GAME SCREEN -->
+  <div id="game-screen" class="hidden">
+    <canvas id="game-canvas"></canvas>
+
+    <!-- HUD -->
+    <div id="hud">
+      <div id="hud-sanity">
+        <span class="hud-label">MIND</span>
+        <div id="sanity-bar-bg"><div id="sanity-bar"></div></div>
+      </div>
+      <div id="hud-day">CYCLE <span id="day-counter">1</span></div>
+      <div id="hud-time" id="time-display">——</div>
+    </div>
+
+    <!-- DIALOGUE BOX -->
+    <div id="dialogue-box" class="hidden">
+      <div id="dialogue-speaker"></div>
+      <div id="dialogue-text"></div>
+      <div id="dialogue-continue">[ press SPACE ]</div>
+    </div>
+
+    <!-- INVENTORY -->
+    <div id="inventory-panel" class="hidden">
+      <div id="inv-title">WHAT YOU CARRY</div>
+      <div id="inv-items"></div>
+      <div class="menu-item" id="btn-inv-close">[ CLOSE ]</div>
+    </div>
+
+    <!-- NOTE READER -->
+    <div id="note-reader" class="hidden">
+      <div id="note-content"></div>
+      <div class="menu-item" id="btn-note-close">[ FOLD IT AWAY ]</div>
+    </div>
+
+    <!-- OVERLAY EFFECTS -->
+    <div id="vignette"></div>
+    <div id="scanlines"></div>
+    <div id="glitch-overlay" class="hidden"></div>
+    <div id="static-overlay" class="hidden"></div>
+  </div>
+
+  <!-- DEATH / TRANSITION SCREEN -->
+  <div id="transition-screen" class="hidden">
+    <div id="transition-text"></div>
+  </div>
+
+  <script src="js/engine.js"></script>
+  <script src="js/world.js"></script>
+  <script src="js/player.js"></script>
+  <script src="js/npc.js"></script>
+  <script src="js/sanity.js"></script>
+  <script src="js/lore.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
